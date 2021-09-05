@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue JS lesson-1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="app">
+        <div class="card">
+            <h1>{{ title }}</h1>
+            <div class="form-control">
+                <input type="text" 
+                v-bind:placeholder="placeholderString" 
+                v-bind:value="inputValue"
+                v-on:input="inputChangeHandler"
+                v-on:keypress.enter ="AddNewNote"
+                />
+            </div>
+                 <button class="btn primary" v-on:click="AddNewNote">Qo'shish</button>
+                  <h3 class="left">Qilinishi kerak bo'lgan ishlar : {{ notes.length }}  ta</h3>
+                 <hr />
+             
+               <ul class="list">
+                  <h3 class="list-item" v-for="(note, idx) in notes">
+                    {{idx + 1}}  -  {{upperCase(note)}}
+                    <button class="btn danger" v-on:click="removeNote(idx)">O'chirish</button>
+               </h3>
+              </ul>
+              <h2 v-if="notes.length === 0">Hozircha eslatmalar yo'q. Birinchisini qo'shing !</h2>
+        </div>
+    </div>
+    
+    <!-- CDN Package -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="main.js"></script>
+</body>
+</html>
