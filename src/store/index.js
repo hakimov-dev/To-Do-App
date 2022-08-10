@@ -17,7 +17,7 @@ export default createStore({
     },
 
     deleteNote(state, id){
-       state.notes.slice(id, 1)
+       state.notes.splice(id, 1)
     }
   },
   actions: {},
