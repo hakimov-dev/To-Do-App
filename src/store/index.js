@@ -18,6 +18,10 @@ export default createStore({
 
     deleteNote(state, id){
        state.notes.splice(id, 1)
+    },
+
+    doneNote(state, event){
+      console.log(event.target)
     }
   },
   actions: {},
