@@ -21,7 +21,8 @@ export default createStore({
     },
 
     doneNote(state, id){
-      console.log(id)
+      const element = document.querySelector(`#${id}`)
+      console.log(element)
     }
   },
   actions: {},
