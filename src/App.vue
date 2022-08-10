@@ -12,7 +12,7 @@
         Things to do: 10 ta
       </h3>
       <hr />
-      
+      <ListItem />
       <!-- <h2 v-if="notes.length === 0">
         Hozircha eslatmalar yo'q. Birinchisini qo'shing !
       </h2> -->
@@ -21,8 +21,12 @@
 </template>
 
 <script>
+import ListItem from './components/listItem.vue';
 export default {
-  name: "App"
+  name: "App",
+  component: {
+    ListItem
+  }
 };
 </script>
 
