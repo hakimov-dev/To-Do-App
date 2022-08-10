@@ -2,7 +2,8 @@ import { createStore } from "vuex";
 
 export default createStore({
   state: {
-    notes: []
+    notes: [],
+    inputValue: ''
   },
   getters: {},
   mutations: {
