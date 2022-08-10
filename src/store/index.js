@@ -8,7 +8,12 @@ export default createStore({
   getters: {},
   mutations: {
     addNotes(state, note){
-     state.notes.push(note)
+     if(state.inputValue.trim() !== ''){
+        state.notes.push(note)
+        state.inputValue = ''
+     } 
+      else
+        alert('Enter something for note!')
     }
   },
   actions: {},
