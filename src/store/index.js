@@ -26,7 +26,9 @@ export default createStore({
     },
 
     deletaAllNotes(state, event){
-      alert('Really?')
+     const userConfirm = confirm('You sure want delete all notes?')
+      if(userConfirm == true)
+        state.notes.splice(event, 1111111)
     }
   },
   actions: {},
