@@ -1,7 +1,7 @@
 <template>
       <ul class="list">
-        <h3 class="list-item" v-for="(note, idx) in 3">
-          {{ idx + 1 }} - Hello world
+        <h3 class="list-item" v-for="(note, idx) in $store.state.notes">
+          {{ idx + 1 }} - {{ note }}
           <button class="btn danger">
             Delete
           </button>
