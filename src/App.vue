@@ -7,6 +7,7 @@
           type="text"
           v-model="$store.state.inputValue"
           @keyup.enter="$store.commit('addNotes', $store.state.inputValue)"
+          maxlength="70"
         />
       </div>
       <button class="btn primary" @click="$store.commit('addNotes', $store.state.inputValue)">Add</button>
@@ -20,7 +21,7 @@
           {{ idx + 1 }} - {{ note }}
           </span>
           <div>
-           <button class="btn" @click="$store.commit('doneNote', $event)">
+           <button class="btn done-btn" @click="$store.commit('doneNote', $event)">
              Done 
            </button>
            <button class="btn danger" @click="$store.commit('deleteNote', idx)">

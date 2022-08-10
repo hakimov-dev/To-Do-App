@@ -147,3 +147,24 @@ h3 {
 .hidden{
     display: none;
 }
+
+@media (min-width: 1024px){   
+.list-item span{
+    max-width: 60%;
+    padding: 0.3rem 0;
+}
+}
+
+@media (max-width: 640px){
+    .list-item span{
+        width: 60%;
+        padding: 0.3rem 0;
+        max-width: 60%;
+        overflow-x: scroll;
+        overflow-y:hidden;
+    }   
+
+    .done-btn{
+        display: none;
+    }
+}
