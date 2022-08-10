@@ -5,7 +5,11 @@ export default createStore({
     notes: []
   },
   getters: {},
-  mutations: {},
+  mutations: {
+    addNotes(state, note){
+     
+    }
+  },
   actions: {},
   modules: {},
 });
