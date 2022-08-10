@@ -12,7 +12,7 @@
       </div>
       <button class="btn primary" @click="$store.commit('addNotes', $store.state.inputValue)">Add</button>
       <div class="left">
-        <button class="btn danger">Delete all</button>
+        <button class="btn danger" @click="$store.commit('deletaAllNotes', $store.state.notes)">Delete all</button>
       </div>
       <hr />
        <ul class="list" v-if="$store.state.notes.length !== 0">
