@@ -9,7 +9,7 @@
       </div>
       <button class="btn primary">Add</button>
       <h3 class="left">
-        Things to do: 10 ta
+        There are {{ $store.state.notes.length }} tasks to uncomplete
       </h3>
       <hr />
       <ListItem  v-if="$store.state.notes.length !== 0"/>
