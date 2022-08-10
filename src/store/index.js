@@ -7,7 +7,7 @@ export default createStore({
   getters: {},
   mutations: {
     addNotes(state, note){
-     
+     state.notes.push(note)
     }
   },
   actions: {},
