@@ -12,14 +12,7 @@
         Things to do: 10 ta
       </h3>
       <hr />
-      <ul class="list">
-        <h3 class="list-item" v-for="(note, idx) in 3">
-          {{ idx + 1 }} - Hello world
-          <button class="btn danger">
-            Delete
-          </button>
-        </h3>
-      </ul>
+      
       <!-- <h2 v-if="notes.length === 0">
         Hozircha eslatmalar yo'q. Birinchisini qo'shing !
       </h2> -->
