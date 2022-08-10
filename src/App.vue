@@ -18,7 +18,7 @@
         <h3 class="list-item" :id="idx" v-for="(note, idx) in $store.state.notes">
           {{ idx + 1 }} - {{ note }}
           <div>
-           <button class="btn" @click="$store.commit('doneNote', $event)">
+           <button class="btn" @click="$store.commit('doneNote', id)">
              Done 
            </button>
            <button class="btn danger" @click="$store.commit('deleteNote', idx)">

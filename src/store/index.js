@@ -20,8 +20,8 @@ export default createStore({
        state.notes.splice(id, 1)
     },
 
-    doneNote(state, event){
-      console.log(event.target)
+    doneNote(state, id){
+      console.log(id)
     }
   },
   actions: {},
