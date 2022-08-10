@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 * {
   box-sizing: border-box;
+  transition: all .3s linear;
 }
 body {
   font-family: Inter, Roboto, Oxygen, Fira Sans, Helvetica Neue, sans-serif;
@@ -136,4 +137,13 @@ h3 {
   position: absolute;
   right: 14%;
   margin-top: -33px;
+}
+
+.done span{
+    opacity: 0.8 !important;
+    text-decoration-line: line-through !important;
+}
+
+.hidden{
+    display: none;
 }
