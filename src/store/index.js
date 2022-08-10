@@ -14,6 +14,10 @@ export default createStore({
      } 
       else
         alert('Enter something for note!')
+    },
+
+    deleteNote(state, id){
+
     }
   },
   actions: {},
