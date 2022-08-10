@@ -10,9 +10,9 @@
         />
       </div>
       <button class="btn primary" @click="$store.commit('addNotes', $store.state.inputValue)">Add</button>
-      <h3 class="left">
-        There are {{ $store.state.notes.length }} tasks to uncomplete
-      </h3>
+      <div class="left">
+        <button class="btn danger">Delete all</button>
+      </div>
       <hr />
        <ul class="list" v-if="$store.state.notes.length !== 0">
         <h3 class="list-item" v-for="(note, idx) in $store.state.notes">
