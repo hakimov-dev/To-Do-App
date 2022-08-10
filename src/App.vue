@@ -6,6 +6,7 @@
         <input
           type="text"
           v-model="$store.state.inputValue"
+          @keyup.enter="$store.commit('addNotes', $store.state.inputValue)"
         />
       </div>
       <button class="btn primary">Add</button>
@@ -13,7 +14,14 @@
         There are {{ $store.state.notes.length }} tasks to uncomplete
       </h3>
       <hr />
-      <ListItem  v-if="$store.state.notes.length !== 0"/>
+       <ul class="list" v-if="$store.state.notes.length !== 0">
+        <h3 class="list-item" v-for="(note, idx) in $store.state.notes">
+          {{ idx + 1 }} - {{ note }}
+          <button class="btn danger">
+            Delete
+          </button>
+        </h3>
+      </ul>
       <h2 v-else>
         At the moment notes none. Add first!
       </h2>
@@ -22,12 +30,8 @@
 </template>
 
 <script>
-import ListItem from './components/listItem.vue';
 export default {
   name: "App",
-  component: {
-    ListItem
-  }
 };
 </script>
 
