@@ -12,8 +12,8 @@
         Things to do: 10 ta
       </h3>
       <hr />
-      <ListItem />
-      <!-- <h2 v-if="notes.length === 0">
+      <ListItem  v-if="notes.length !== 0"/>
+      <!-- <h2 >
         Hozircha eslatmalar yo'q. Birinchisini qo'shing !
       </h2> -->
     </div>
