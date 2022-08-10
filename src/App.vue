@@ -9,7 +9,7 @@
           @keyup.enter="$store.commit('addNotes', $store.state.inputValue)"
         />
       </div>
-      <button class="btn primary">Add</button>
+      <button class="btn primary" @click="$store.commit('addNotes', $store.state.inputValue)">Add</button>
       <h3 class="left">
         There are {{ $store.state.notes.length }} tasks to uncomplete
       </h3>
