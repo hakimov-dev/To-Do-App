@@ -23,6 +23,10 @@ export default createStore({
     doneNote(state, event){
       event.path[2].classList.add('done')
       event.target.classList.add('hidden')
+    },
+
+    deletaAllNotes(state, event){
+      alert('Really?')
     }
   },
   actions: {},
