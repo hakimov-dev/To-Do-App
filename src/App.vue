@@ -12,7 +12,7 @@
         Things to do: 10 ta
       </h3>
       <hr />
-      <ListItem  v-if="notes.length !== 0"/>
+      <ListItem  v-if="$store.state.notes.length !== 0"/>
       <h2 v-else>
         Hozircha eslatmalar yo'q. Birinchisini qo'shing !
       </h2>
