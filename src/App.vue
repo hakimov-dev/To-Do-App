@@ -14,7 +14,7 @@
       <hr />
       <ListItem  v-if="$store.state.notes.length !== 0"/>
       <h2 v-else>
-        Hozircha eslatmalar yo'q. Birinchisini qo'shing !
+        At the moment notes none. Add first!
       </h2>
     </div>
   </div>
