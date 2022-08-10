@@ -1,9 +1,24 @@
+# todo-app
 
-# To Do aplication 
+## Project setup
+```
+npm install
+```
 
-![todo](https://user-images.githubusercontent.com/83240328/132297529-d9c876cf-2c40-426c-9b24-8b6bf41d099b.png)
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-<h3><a href="https://hakimov-dev.github.io/To-Do-App/">View website on demo</a></h3>
+### Compiles and minifies for production
+```
+npm run build
+```
 
-<hr>
- <h4>Created by <a href="https://github.com/hakimov-dev/">&copy; Hakimov-dev</a></h4>
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
