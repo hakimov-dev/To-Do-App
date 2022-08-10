@@ -5,6 +5,7 @@
       <div class="form-control">
         <input
           type="text"
+          v-model="$store.state.inputValue"
         />
       </div>
       <button class="btn primary">Add</button>
