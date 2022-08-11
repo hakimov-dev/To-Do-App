@@ -39,7 +39,7 @@ export default createStore({
     },
 
     getNotes(state, value){
-      if(cookies.get('user_all_notes') !== undefined)
+      if(cookies.get('user_all_notes'))
           state.notes = JSON.parse(cookies.get('user_all_notes'))
     }
   },
