@@ -1,7 +1,7 @@
 import { createStore } from "vuex";
 import cookies from 'vue-cookies';
 
-cookies.cookies.config('365d')
+cookies.config('365d')
 
 export default createStore({
   state: {
