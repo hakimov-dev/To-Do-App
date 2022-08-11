@@ -13,7 +13,7 @@ export default createStore({
     addNotes(state, note){
      if(state.inputValue.trim() !== ''){
         state.notes.push({note: note, isDone: false})
-        cookies.set('user_all_notes', state.notes)
+        cookies.set('user_all_notes', JSON.stringify(state.notes))
         state.inputValue = ''
      } 
       else
@@ -22,12 +22,12 @@ export default createStore({
 
     deleteNote(state, id){
        state.notes.splice(id, 1)
-       cookies.set('user_all_notes', state.notes)
+       cookies.set('user_all_notes', JSON.stringify(state.notes))
     },
 
     doneNote(state, id){
       state.notes[id].isDone = true
-      cookies.set('user_all_notes', state.notes)
+      cookies.set('user_all_notes', JSON.stringify(state.notes))
     },
 
     deletaAllNotes(state, event){
