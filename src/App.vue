@@ -21,7 +21,7 @@
           {{ idx + 1 }} - {{ note }}
           </span>
           <div>
-           <button class="btn done-btn" @click="$store.commit('doneNote', $event)">
+           <button class="btn done-btn" @click="$store.commit('doneNote', idx)">
              Done 
            </button>
            <button class="btn danger" @click="$store.commit('deleteNote', idx)">
