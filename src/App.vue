@@ -21,7 +21,7 @@
           {{ idx + 1 }} - {{ note.note }}
           </span>
           <div>
-           <button class="btn done-btn" @click="$store.commit('doneNote', idx)">
+           <button v-if="!note.isDone" class="btn done-btn" @click="$store.commit('doneNote', idx)">
              Done 
            </button>
            <button class="btn danger" @click="$store.commit('deleteNote', idx)">
