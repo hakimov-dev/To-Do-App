@@ -13,6 +13,7 @@ export default createStore({
     addNotes(state, note){
      if(state.inputValue.trim() !== ''){
         state.notes.push({note: note, isDone: false})
+        cookies.set('user_all_notes', state.notes)
         state.inputValue = ''
      } 
       else
