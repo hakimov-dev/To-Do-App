@@ -22,10 +22,12 @@ export default createStore({
 
     deleteNote(state, id){
        state.notes.splice(id, 1)
+       cookies.set('user_all_notes', state.notes)
     },
 
     doneNote(state, id){
       state.notes[id].isDone = true
+      cookies.set('user_all_notes', state.notes)
     },
 
     deletaAllNotes(state, event){
