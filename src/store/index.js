@@ -21,7 +21,7 @@ export default createStore({
     },
 
     doneNote(state, id){
-      
+      state.notes[id].isDone = true
     },
 
     deletaAllNotes(state, event){
