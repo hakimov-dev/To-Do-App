@@ -9,7 +9,7 @@ export default createStore({
   mutations: {
     addNotes(state, note){
      if(state.inputValue.trim() !== ''){
-        state.notes.push(note)
+        state.notes.push({note: note, isDone: false})
         state.inputValue = ''
      } 
       else
