@@ -18,7 +18,7 @@
        <ul class="list" v-if="$store.state.notes.length !== 0">
         <h3 class="list-item" v-for="(note, idx) in $store.state.notes">
           <span class="todo-text">
-          {{ idx + 1 }} - {{ note }}
+          {{ idx + 1 }} - {{ note.note }}
           </span>
           <div>
            <button class="btn done-btn" @click="$store.commit('doneNote', idx)">
