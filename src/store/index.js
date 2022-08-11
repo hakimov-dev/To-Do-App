@@ -20,9 +20,8 @@ export default createStore({
        state.notes.splice(id, 1)
     },
 
-    doneNote(state, event){
-      event.path[2].classList.add('done')
-      event.target.classList.add('hidden')
+    doneNote(state, id){
+      
     },
 
     deletaAllNotes(state, event){
