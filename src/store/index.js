@@ -32,8 +32,10 @@ export default createStore({
 
     deletaAllNotes(state, event){
      const userConfirm = confirm('You sure want delete all notes?')
-      if(userConfirm == true)
+      if(userConfirm == true){
         state.notes.splice(event, 1111111)
+        cookies.remove('user_all_notes')
+      }
     },
 
     getNotes(state){
