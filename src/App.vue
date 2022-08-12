@@ -64,7 +64,9 @@ export default {
   },
 
   methods: {
-   
+    getVoice(result){
+      
+    }
   },
 };
 </script>
