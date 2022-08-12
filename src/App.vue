@@ -65,56 +65,31 @@
 import { useStore } from "vuex";
 
 const store = useStore();
-const recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-const soundRecord = new recognition();
+window.SpeechRecognition =  window.SpeechRecognition || window.webkitSpeechRecognition
+let soundRecord = new window.SpeechRecognition();
+
+window.addEventListener("keyup", (event) => {
+  if (event.key == 'l')
+    soundRecord.stop()
+})
 
 window.addEventListener("keydown", (event) => {
-  if (event.keyCode == 76) {
-    soundRecord.continuous = true;
-    soundRecord.interimResults = true;
+  if (event.key == 'l' && !event.repeat) {
+      soundRecord.lang = 'en-US';
+      soundRecord.interimResults = false;
+      soundRecord.start();
+      soundRecord.continuous = false;
 
-    soundRecord.onstart = () => {
-      console.log("Sound record started");
-    };
+      soundRecord.onresult = (evt) => {
+        console.log(evt)
+        const t = Array.from(evt.results)
+          .map((result) => result[0])
+          .map((result) => result.transcript)
+          .join("");
+        store.state.inputValue = t
+  }}
+})
 
-    soundRecord.onend = () => {
-      console.log("Sound record Stopped");
-    };
-
-    soundRecord.onresult = (evt) => {
-      for (let i = 0; i < evt.results.length; i++) {
-        const result = evt.results[i];
-      }
-      const t = Array.from(evt.results)
-        .map((result) => result[0])
-        .map((result) => result.transcript)
-        .join("");
-
-      store.state.inputValue = t;
-    };
-  }
-});
-
-// export default {
-//   name: "App",
-
-//   mounted() {
-//     this.$store.commit('getNotes', null)
-
-//     window.addEventListener('keyup', event => {
-//       if(event.keyCode == 76){
-//         console.log('Keyup')
-//       }
-//     });
-
-//   },
-
-//   methods: {
-//     getVoice(result){
-
-//     }
-//   },
-// };
 </script>
 
 <style></style>
