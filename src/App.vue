@@ -61,7 +61,11 @@ export default {
         console.log('Press keydown')
       }
     });
-  }
+  },
+
+  methods: {
+   
+  },
 };
 </script>
 
