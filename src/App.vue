@@ -49,6 +49,13 @@ import { useStore } from 'vuex'
 const store = useStore()
 const recognition = window.SpeechRecognition || window.webkitSpeechRecognition
 const soundRecord = new Recognition()
+
+    window.addEventListener('keydown', event => {
+      if(event.keyCode == 76 && event.repeat === false){
+       
+      }
+    });
+
 // export default {
 //   name: "App",
   
@@ -61,11 +68,7 @@ const soundRecord = new Recognition()
 //       }
 //     });
 
-//       window.addEventListener('keydown', event => {
-//       if(event.keyCode == 76 && event.repeat === false){
-//         console.log('Press keydown')
-//       }
-//     });
+
 //   },
 
 //   methods: {
