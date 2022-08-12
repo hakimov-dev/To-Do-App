@@ -52,12 +52,12 @@ export default {
 
     window.addEventListener('keyup', event => {
       if(event.keyCode == 76){
-        console.log('Press keyup')
+        console.log('Keyup')
       }
     });
 
       window.addEventListener('keydown', event => {
-      if(event.keyCode == 76){
+      if(event.keyCode == 76 && event.repeat === false){
         console.log('Press keydown')
       }
     });
