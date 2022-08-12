@@ -44,11 +44,11 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import { useStore } from 'vuex'
 
 const store = useStore()
 const recognition = window.SpeechRecognition || window.webkitSpeechRecognition
+
 // export default {
 //   name: "App",
   
