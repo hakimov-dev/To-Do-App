@@ -55,8 +55,8 @@ export default {
         console.log('Press keyup')
       }
     });
-    
-    window.addEventListener('keydown', event => {
+
+      window.addEventListener('keydown', event => {
       if(event.keyCode == 76){
         console.log('Press keydown')
       }
