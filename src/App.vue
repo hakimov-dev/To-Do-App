@@ -44,31 +44,31 @@
 </template>
 
 <script>
-export default {
-  name: "App",
+// export default {
+//   name: "App",
   
-  mounted() {
-    this.$store.commit('getNotes', null)
+//   mounted() {
+//     this.$store.commit('getNotes', null)
 
-    window.addEventListener('keyup', event => {
-      if(event.keyCode == 76){
-        console.log('Keyup')
-      }
-    });
+//     window.addEventListener('keyup', event => {
+//       if(event.keyCode == 76){
+//         console.log('Keyup')
+//       }
+//     });
 
-      window.addEventListener('keydown', event => {
-      if(event.keyCode == 76 && event.repeat === false){
-        console.log('Press keydown')
-      }
-    });
-  },
+//       window.addEventListener('keydown', event => {
+//       if(event.keyCode == 76 && event.repeat === false){
+//         console.log('Press keydown')
+//       }
+//     });
+//   },
 
-  methods: {
-    getVoice(result){
+//   methods: {
+//     getVoice(result){
       
-    }
-  },
-};
+//     }
+//   },
+// };
 </script>
 
 <style></style>
