@@ -49,6 +49,18 @@ export default {
   
   mounted() {
     this.$store.commit('getNotes', null)
+
+    window.addEventListener('keyup', event => {
+      if(event.keyCode == 76){
+        console.log('Press keyup')
+      }
+    });
+    
+    window.addEventListener('keydown', event => {
+      if(event.keyCode == 76){
+        console.log('Press keydown')
+      }
+    });
   }
 };
 </script>
