@@ -48,7 +48,7 @@ import { useStore } from 'vuex'
 
 const store = useStore()
 const recognition = window.SpeechRecognition || window.webkitSpeechRecognition
-
+const soundRecord = new Recognition()
 // export default {
 //   name: "App",
   
